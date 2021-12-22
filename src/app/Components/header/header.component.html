@@ -1,0 +1,23 @@
+ <!-- ======= Header ======= -->
+ <header id="header" class="fixed-top header-scrolled mb-5 ">
+  <div class="container d-flex align-items-center justify-content-between">
+
+    <h1 class="logo"><a [routerLink]="['/home']" routerLinkActive="active"><img src="assets/img/logo.png" alt=""></a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar"[ngClass]="mobile == true ? 'navbar navbar-mobile' : 'navbar'" >
+      <ul>
+        <li><a class="nav-link scrollto " (click)="mobile=false"[routerLink]="['/home']" routerLinkActive="active" >Home</a></li>
+        <li><a class="nav-link scrollto"  (click)="mobile=false"[routerLink]="['/about']" routerLinkActive="active" >About</a></li>
+        <li><a class="nav-link scrollto"  (click)="mobile=false"[routerLink]="['/services']" routerLinkActive="active">Services</a></li>
+        <li><a class="nav-link scrollto " (click)="mobile=false"[routerLink]="['/portfolio']" routerLinkActive="active">Portfolio</a></li>
+        <li><a class="nav-link scrollto"  (click)="mobile=false"[routerLink]="['/team']" routerLinkActive="active">Team</a></li>
+        <li><a class="nav-link scrollto"  (click)="mobile=false"[routerLink]="['/contact']" routerLinkActive="active">Contact</a></li>
+        <li><a class="getstarted scrollto"(click)="mobile=false"[routerLink]="['/about']" routerLinkActive="active">Get Started</a></li>
+      </ul>
+      <i class="bi bi-list  mobile-nav-toggle" (click)="getmobList()"></i>
+    </nav><!-- .navbar -->
+
+  </div>
+</header><!-- End Header -->
